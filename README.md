@@ -28,6 +28,7 @@ Features of the xUCP V2 Free:
   7. Site Settings
   8. Clients & Servers
   9. Game server SQL Line Setup System
+ 10. Server Status System
 
 
 best regards
