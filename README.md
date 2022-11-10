@@ -27,8 +27,8 @@ Features of the xUCP V2 Free:
   6. My character
   7. Site Settings
   8. Clients & Servers
-  9. Game server SQL Line Setup System
- 10. Server Status System
+  9. Game server SQL Line Setup System (Only Pro Version)
+ 10. Server Status System (Only Pro Version)
  11. BB-Code-Editor System
 
 
