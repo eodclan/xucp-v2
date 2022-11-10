@@ -24,7 +24,7 @@ Features of the xUCP V2 Free:
   3. Language System ( English & German )
   4. Support system
   5. Edit profile
-  6. My character
+  6. My character (Only Pro Version)
   7. Site Settings
   8. Clients & Servers
   9. Game server SQL Line Setup System (Only Pro Version)
