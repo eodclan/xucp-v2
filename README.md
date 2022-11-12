@@ -6,10 +6,6 @@ xUCP V2 Free (Open Source) Readme
 https://derstr1k3r.de
 https://discord.gg/xg5mnYUWch
 
-Demopage from xUCP V2 Free:
-
-  1. https://xucp.derstr1k3r.de
-
 
 Requirements for xUCP V2 Free:
 
