@@ -2,8 +2,11 @@
  In this User Control Panel, it is a completely new development. The xUCP V2 is for all Roleplay Projects!
  
 xUCP V2 Free (Open Source) Readme
+
 (C) 2022 DerStr1k3r.de
+
 https://derstr1k3r.de
+
 https://discord.gg/xg5mnYUWch
 
 
@@ -23,11 +26,16 @@ Features of the xUCP V2 Free:
   6. My character (Only Pro Version)
   7. Site Settings
   8. Clients & Servers
-  9. Game server SQL Line Setup System (Only Pro Version)
- 10. Server Status System (Only Pro Version)
- 11. BB-Code-Editor System
- 12. Game Server Status System (Only Pro Version)
- 13. Upgrade Notice System (Only Free Version)
+  9. Server Status System (Only Pro Version)
+ 10. BB-Code-Editor System
+ 11. Game Server Status System (Only Pro Version)
+ 12. Upgrade Notice System (Only Free Version)
+
+Optimal purchasable addons for xUCP V2 Free:
+
+  1. My character V2
+  2. Game Server Status System
+
 
 best regards
 
