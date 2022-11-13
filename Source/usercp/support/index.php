@@ -23,10 +23,6 @@ if (isset($_GET["site"])) {
 };  
 $start_from = ($site-1) * $limit;
 
-if (isset($_GET["support"])) $support = trim(htmlentities($_GET["support"]));
-elseif (isset($_POST["support"])) $support = trim(htmlentities($_POST["support"]));
-else $support = "view";
-
 site_header("".USERSUPPORT."");
 site_navi_logged();
 site_content_logged();
@@ -47,29 +43,6 @@ echo"
                                 </div>
                             </div>
                         </div>";  
-
-if ($support == "remoticket") {
-	if(isset($_POST['sup_rem'])){
-		$sql3 = "DELETE FROM xucp_support";
-		$result3 = mysqli_query($conn, $sql3);
-		if($result3)
-		{
-			echo"
-                        <div class='row'>
-							<div class='col-xl-12'>
-								<div class='card'>
-									<div class='card-header'>
-										<h4 class='card-title'>".USERSUPPORT."</h4>
-									</div>
-									<div class='card-body'>
-										".SUPPORTDELETEINFO."
-									</div>
-								</div>
-							</div>
-						</div>";
-		} 
-	}		           		
-}
 
 if(isset($_POST['posted_sup'])){
 	$username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
