@@ -237,7 +237,7 @@ echo "
                                             </div>
                                         </form>
 									<div class='mt-5 text-center'>
-										<p class='text-muted mb-0'>".NOTE3." <a href='/usercp/register/index.php?myregister=register' class='text-primary fw-semibold'> ".REGISTER." </a> </p>
+										<p class='text-muted mb-0'>".NOTE4." <a href='/usercp/register/index.php?myregister=register' class='text-primary fw-semibold'> ".LOGIN." </a> </p>
 									</div>					
                                 </div>
                             </div>

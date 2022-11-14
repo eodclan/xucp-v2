@@ -281,6 +281,7 @@ define("SUBMIT", "Submit");
 define("NOTE", "<b>Note:</b> Fields with <span class='pflichtfeld'>*</span> have to be filled out.");
 define("NOTE2", "<b>Note:</b> The username and the social club name must be the same.");
 define("NOTE3", "<b>Note:</b> Don't have an account ?");
+define("NOTE4", "<b>Note:</b> You have an account ?");
 define("INFO1", "Enter Username");
 define("INFO2", "Enter Password");
 define("INDEXTEXT", "We bring the roleplay to a new level, with our realistic handling, there are no limits!");

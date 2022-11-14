@@ -281,6 +281,7 @@ define("RULES", "Regeln");
 define("NOTE", "<b>Hinweis:</b> Felder mit <span class='pflichtfeld'>*</span> m&uuml;ssen ausgef&uuml;llt werden.");
 define("NOTE2", "<b>Hinweis:</b> Der Username sowie der Social Club Name m&uuml;ssen gleich sein.");
 define("NOTE3", "<b>Hinweis:</b> Sie haben kein Konto?");
+define("NOTE4", "<b>Hinweis:</b> Sie haben ein Konto?");
 define("INFO1", "Benutzername eingeben");
 define("INFO2", "Passwort eingeben");
 define("INDEXTEXT", "Wir Bringen Das Roleplay Auf Ein Neues Level, Mit Unserer Realistischen Handhabung, Sind Uns Keine Grenzen Gesetzt!");
