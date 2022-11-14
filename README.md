@@ -35,6 +35,7 @@ Optimal purchasable addons for xUCP V2 Free:
 
   1. My character V2
   2. Game Server Status System
+  3. Mass E-Mail System
 
 
 best regards
