@@ -10,6 +10,11 @@ https://derstr1k3r.de
 https://discord.gg/xg5mnYUWch
 
 
+xUCP Pro V2.0 Demopage:
+
+https://xucp.derstr1k3r.de
+
+
 Requirements for xUCP V2 Free:
 
   1. MySQL servers
