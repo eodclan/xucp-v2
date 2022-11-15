@@ -35,6 +35,7 @@ Features of the xUCP V2 Free:
  10. BB-Code-Editor System
  11. Game Server Status System (Only Pro Version)
  12. Upgrade Notice System (Only Free Version)
+ 13. Class Admin Settings System
 
 Optimal purchasable addons for xUCP V2 Free:
 

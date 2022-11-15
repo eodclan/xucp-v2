@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 2.0
+// * Version: 2.1
 // * 
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -173,15 +173,15 @@ $ct_userspm_def = array(
     'printerxp',
     'kololos');
  
-  if ($cracktrack != $checkworm)
-  {
-      $expl = explode("X*X" ,$checkworm);
-      $manipulated = str_replace($expl[0] , "" ,$cracktrack);
-      foreach ($expl as $delete)
-      $manipulated = str_replace($delete , "'" ,$manipulated); 
-      $cremotead = $_SERVER['REMOTE_ADDR'];
-      $cuseragent = $_SERVER['HTTP_USER_AGENT'];
+	if ($cracktrack != $checkworm)
+	{
+		$expl = explode("X*X" ,$checkworm);
+		$manipulated = str_replace($expl[0] , "" ,$cracktrack);
+		foreach ($expl as $delete)
+		$manipulated = str_replace($delete , "'" ,$manipulated); 
+		$cremotead = $_SERVER['REMOTE_ADDR'];
+		$cuseragent = $_SERVER['HTTP_USER_AGENT'];
         die( "<font color=red>Attack detected! <br /><br /><b>has detected a potential attack on this site with a worm or exploit script so the Security System stopped the script.:</b><br />$cremotead - $cuseragent" );
-  }
+	}
 }
 ?>

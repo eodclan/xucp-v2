@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 2.0
+// * Version: 2.1
 // * 
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -59,7 +59,7 @@ function site_secure() {
 }
 
 function site_secure_staff_check() {
-	if(intval($_SESSION['username']['secure_staff']) < 10) {
+	if(intval($_SESSION['username']['secure_staff']) < "".UC_CLASS_SUPPORTER."") {
 		site_header_nologged("".SECURE_SYSTEM."");
 		site_navi_nologged();
 		site_content_nologged();
@@ -99,7 +99,7 @@ function site_secure_staff_check() {
 }
 
 function site_secure_staff_check_rank() {
-	if(intval($_SESSION['username']['secure_staff']) < 100) {
+	if(intval($_SESSION['username']['secure_staff']) < "".UC_CLASS_PROJECT_MANAGEMENT."") {
 		site_header("".SECURE_SYSTEM."");
 		site_navi_logged();
 		site_content_logged();

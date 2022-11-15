@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 2.0
+// * Version: 2.1
 // * 
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -70,10 +70,10 @@ if ($xucp_result->num_rows > 0) {
                             </div>
                         </div>
                     </div>";
-		site_footer();
-		setCookie("PHPSESSID", "", 0x7fffffff,  "/");
-		session_destroy();	
-		die();		
+			site_footer();
+			setCookie("PHPSESSID", "", 0x7fffffff,  "/");
+			session_destroy();	
+			die();		
 		}
 	}
 }

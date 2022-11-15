@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 2.0
+// * Version: 2.1
 // * 
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -94,8 +94,6 @@ if ($myregister == "register") {
 						</div>";			
 		}
 
-		// CHECK IF USER IS ALREADY REGISTERED
-		$check_user = mysqli_query($conn, "SELECT `username` FROM `accounts` WHERE username = '$username' LIMIT 1");
 		// CSRF Token Validation
 		if(isset($_POST['csrf_token'])){
 			if($_POST['csrf_token'] === $_SESSION['xucp_secure']['csrf_token']){
@@ -142,6 +140,9 @@ if ($myregister == "register") {
 				unset($_SESSION['xucp_secure']['csrf_token_time']);
 			}
 		}
+
+		// CHECK IF USER IS ALREADY REGISTERED
+		$check_user = mysqli_query($conn, "SELECT `username` FROM `accounts` WHERE username = '$username' LIMIT 1");
 
 		if(mysqli_num_rows($check_user) > 0){
 			echo"

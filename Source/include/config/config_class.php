@@ -18,18 +18,13 @@ if ( $_SERVER['REQUEST_METHOD']=='GET' && realpath(__FILE__) == realpath( $_SERV
   	session_destroy();
 	die( header( 'location: /404.php' ) );
 }
-function site_content_nologged() {
-  echo "
-            <div class='main-content'>
-                <div class='page-content'>
-                    <div class='container-fluid'>";	  
-}
+// ************************************************************************************//
+// * Class: Supporter ( default = 10 )
+// ************************************************************************************//
+define("UC_CLASS_SUPPORTER","10");
 
-function site_content_logged() {
-  echo "
-            <div class='main-content'>
-                <div class='page-content'>
-                    <div class='container-fluid'>";	
-}
-
+// ************************************************************************************//
+// * Class: Project Management ( default = 100 )
+// ************************************************************************************//
+define("UC_CLASS_PROJECT_MANAGEMENT","100");
 ?>
