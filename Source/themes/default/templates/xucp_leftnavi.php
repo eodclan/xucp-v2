@@ -100,6 +100,8 @@ function site_navi_logged() {
 									<li><a href='/staffcp/news/index.php' data-key='t-blog-details'>".NEWS_HEADER."</a></li>
 									<li><a href='/staffcp/rules/index.php' data-key='t-blog-grid'>".STAFF_RULESACP."</a></li>
 									<li><a href='/staffcp/keyboard/index.php' data-key='t-blog-list'>".KEY_HEADER."</a></li>
+									<li><a href='/staffcp/massemail/index.php' data-key='t-blog-list'>".EMAIL_SYSTEM_HEADER."</a></li>
+									<li><a href='/staffcp/add_sponsor/index.php' data-key='t-blog-list'>".SPONSOR_SYSTEM_HEADER."</a></li>									
 								</ul>
 							</li>
 						</ul>";
