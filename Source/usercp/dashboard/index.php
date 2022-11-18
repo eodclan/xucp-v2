@@ -65,7 +65,7 @@ echo "
                         </div>";					
 }					
 
-if(intval($_SESSION['username']['secure_staff']) >= 5) {
+if(intval($_SESSION['username']['secure_staff']) >= "".UC_CLASS_SUPPORTER."") {
 echo "
                         <div class='row'>";
 
