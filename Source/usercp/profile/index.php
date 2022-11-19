@@ -62,6 +62,7 @@ if ($profilechange == "changemydata") {
 			$usersig = filter_input(INPUT_POST, 'usersig', FILTER_SANITIZE_STRING);
 			$userava = filter_input(INPUT_POST, 'userava', FILTER_SANITIZE_STRING);
 			$userhp = filter_input(INPUT_POST, 'userhp', FILTER_SANITIZE_STRING);
+			$userdiscordtag = filter_input(INPUT_POST, 'userdiscordtag', FILTER_SANITIZE_STRING);
 			$email 	= filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
 			$language 	= filter_input(INPUT_POST, 'language', FILTER_SANITIZE_STRING);			
 			$password = filter_input(INPUT_POST, 'password', FILTER_DEFAULT);
@@ -147,7 +148,7 @@ if ($profilechange == "changemydata") {
 						</div>";				
 			}			
 
-			$sql = "UPDATE accounts SET usersig='".$usersig."', email='".$email."', language='".$language."', password='".$hashPassword."', userava='".$userava."', userhp='".$userhp."' WHERE id = '".$_SESSION['username']['secure_first']."'";
+			$sql = "UPDATE accounts SET usersig='".$usersig."', email='".$email."', language='".$language."', password='".$hashPassword."', userava='".$userava."', userhp='".$userhp."', userdiscordtag='".$userdiscordtag."' WHERE id = '".$_SESSION['username']['secure_first']."'";
    
 			if (mysqli_query($conn, $sql)) {
 			echo"
@@ -277,7 +278,7 @@ echo "
                                                 <div>
                                                     <div class='pb-3'>
                                                         <div class='text-muted'>";
-														$sql = "SELECT email, password, usersig, userhp, language, userava FROM accounts WHERE id = ".$_SESSION['username']['secure_first']."";
+														$sql = "SELECT email, password, usersig, userhp, language, userava, userdiscordtag FROM accounts WHERE id = ".$_SESSION['username']['secure_first']."";
 														$result = $conn->query($sql);
 
 														if ($result->num_rows > 0) {
@@ -298,6 +299,10 @@ echo "
 																		<div class='col-md-12'>
 																			<label class='form-label'>".PROFILE_PORTFOLIO_WEBSITE."</label>
 																			<input class='form-control' type='text' name='userhp' placeholder='".PROFILE_PORTFOLIO_WEBSITE."' value='".htmlentities($account['userhp'], ENT_QUOTES, 'UTF-8')."' required>
+																		</div>	
+																		<div class='col-md-12'>
+																			<label class='form-label'>".PROFILE_PORTFOLIO_DISCORDTAG."</label>
+																			<input class='form-control' type='text' name='userdiscordtag' placeholder='".PROFILE_PORTFOLIO_DISCORDTAG."' value='".htmlentities($account['userdiscordtag'], ENT_QUOTES, 'UTF-8')."' required>
 																		</div>																		
 																		<div class='col-md-12'>
 																			<label class='form-label'>".LANGUAGE."</label>
@@ -340,27 +345,66 @@ echo "
                                     <div class='card-body'>
                                         <h5 class='card-title mb-3'>".PROFILE_PORTFOLIO."</h5>
 
-                                        <div>
-                                            <ul class='list-unstyled mb-0'>
-                                                <li>";
+                                        <div class='list-group list-group-flush'>";
 											$sql = "SELECT userhp FROM accounts WHERE id = ".$_SESSION['username']['secure_first']."";
 											$result = $conn->query($sql);
 
 											if ($result->num_rows > 0) {
 											// output data of each row
 												while($account = $result->fetch_assoc()) {
-													echo "												
-                                                    <a href='".htmlentities($account['userhp'], ENT_QUOTES, 'UTF-8')."' class='py-2 d-block text-muted'><i class='mdi mdi-web text-primary me-1'></i> ".PROFILE_PORTFOLIO_WEBSITE."</a>";
+													echo "
+                                            <a href='#' class='list-group-item list-group-item-action'>
+                                                <div class='d-flex align-items-center'>
+                                                    <div class='avatar-sm flex-shrink-0 me-3'>
+														<i class='mdi mdi-web img-thumbnail rounded-circle'></i>
+                                                    </div>
+                                                    <div class='flex-grow-1'>
+                                                        <div>
+                                                            <h5 class='font-size-14 mb-1'>".PROFILE_PORTFOLIO_WEBSITE."</h5>
+                                                            <p class='font-size-13 text-muted mb-0'>".htmlentities($account['userhp'], ENT_QUOTES, 'UTF-8')."</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>";
 												}
-												mysqli_close($conn);
 											}
 											echo "
-                                                </li>
-                                            </ul>
                                         </div>
                                     </div>
                                 </div>
-                            </div>";		
+								<div class='card'>
+                                    <div class='card-body'>
+                                        <h5 class='card-title mb-3'>".PROFILE_PORTFOLIO_DISCORDTAG."</h5>
+
+                                        <div class='list-group list-group-flush'>";
+									$sql = "SELECT username, userava, userdiscordtag FROM accounts WHERE id = ".$_SESSION['username']['secure_first']."";
+									$result = $conn->query($sql);
+
+									if ($result->num_rows > 0) {
+									// output data of each row
+										while($account = $result->fetch_assoc()) {
+											echo "
+                                            <a href='#' class='list-group-item list-group-item-action'>
+                                                <div class='d-flex align-items-center'>
+                                                    <div class='avatar-sm flex-shrink-0 me-3'>
+                                                        <img src='".htmlentities($account['userava'], ENT_QUOTES, 'UTF-8')."' alt='' class='img-thumbnail rounded-circle'>
+                                                    </div>
+                                                    <div class='flex-grow-1'>
+                                                        <div>
+                                                            <h5 class='font-size-14 mb-1'>".htmlentities($account['username'], ENT_QUOTES, 'UTF-8')."</h5>
+                                                            <p class='font-size-13 text-muted mb-0'>".htmlentities($account['userdiscordtag'], ENT_QUOTES, 'UTF-8')."</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>";
+										}
+										mysqli_close($conn);
+									}
+									echo "
+                                        </div>
+                                    </div>
+                                </div>
+							</div>";		
 
 site_footer();	
 ?>

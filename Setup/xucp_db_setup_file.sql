@@ -29,7 +29,8 @@ CREATE TABLE `accounts` (
   `language` varchar(50) DEFAULT 'de',
   `userava` varchar(256) DEFAULT '/themes/uploads/default.jpg',
   `usersig` varchar(256) DEFAULT 'No signature available!',
-  `userhp` varchar(64) DEFAULT NULL
+  `userhp` varchar(64) DEFAULT NULL,
+  `userdiscordtag` varchar(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 
