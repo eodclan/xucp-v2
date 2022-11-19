@@ -289,6 +289,7 @@ define("PROFILE_SETTINGS", "Settings");
 define("PROFILE_ABOUT", "About");
 define("PROFILE_PORTFOLIO", "Portfolio");
 define("PROFILE_PORTFOLIO_WEBSITE", "Website");
+define("PROFILE_PORTFOLIO_DISCORDTAG", "Mein Discordtag");
 
 // ************************************************************************************//
 // * German Language Section - Staff Member 
