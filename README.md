@@ -14,6 +14,8 @@ xUCP Pro V2.0 Demopage:
 
 https://xucp.derstr1k3r.de
 
+Interested in the Pro version?
+Then join my Discord server and send me a private message.
 
 Requirements for xUCP V2 Free:
 
@@ -44,7 +46,7 @@ Optimal purchasable addons for xUCP V2 Free:
   3. Mass E-Mail System
   4. Add User System
   5. Sponsor System
-
+  6. Service status
 
 best regards
 
