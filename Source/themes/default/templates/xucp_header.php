@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 2.1
+// * Version: 2.2
 // * 
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -18,7 +18,12 @@ if ( $_SERVER['REQUEST_METHOD']=='GET' && realpath(__FILE__) == realpath( $_SERV
   	session_destroy();
 	die( header( 'location: /404.php' ) );
 }
-function site_header($SITESUBTITLE = "") {
+/**
+ * @param string $SITESUBTITLE
+ * @return void
+ */
+function site_header(string $SITESUBTITLE = ""): void
+{
   // starting secure urls
   secure_url();
   // starting header section
@@ -99,7 +104,12 @@ echo "
             </header>";
 }
 
-function site_header_nologged($SITESUBTITLE = "") {
+/**
+ * @param string $SITESUBTITLE
+ * @return void
+ */
+function site_header_nologged(string $SITESUBTITLE = ""): void
+{
   // starting secure urls  
   secure_url();
   // starting header section  

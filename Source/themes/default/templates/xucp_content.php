@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 2.1
+// * Version: 2.2
 // * 
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -18,14 +18,22 @@ if ( $_SERVER['REQUEST_METHOD']=='GET' && realpath(__FILE__) == realpath( $_SERV
   	session_destroy();
 	die( header( 'location: /404.php' ) );
 }
-function site_content_nologged() {
+/**
+ * @return void
+ */
+function site_content_nologged(): void
+{
   echo "
             <div class='main-content'>
                 <div class='page-content'>
                     <div class='container-fluid'>";	  
 }
 
-function site_content_logged() {
+/**
+ * @return void
+ */
+function site_content_logged(): void
+{
   echo "
             <div class='main-content'>
                 <div class='page-content'>

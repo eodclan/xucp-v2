@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 2.1
+// * Version: 2.2
 // * 
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -18,7 +18,11 @@ if ( $_SERVER['REQUEST_METHOD']=='GET' && realpath(__FILE__) == realpath( $_SERV
   	session_destroy();
 	die( header( 'location: /404.php' ) );
 }
-function site_navi_logged() {
+/**
+ * @return void
+ */
+function site_navi_logged(): void
+{
 		echo "
             <div class='vertical-menu'>
                 <div data-simplebar class='h-100'>
@@ -71,7 +75,7 @@ function site_navi_logged() {
 									<li><a href='/usercp/keyboard/index.php' data-key='t-read-email'>".KEY_HEADER_2."</a></li>
 								</ul>
 							</li>";
-						if(intval($_SESSION['username']['secure_staff']) >= "".UC_CLASS_SUPPORTER."") {
+						if(intval($_SESSION['username']['secure_staff']) >= UC_CLASS_SUPPORTER) {
 						echo "
 							<li>
 								<a href='javascript: void(0);' class='has-arrow'>
@@ -87,12 +91,12 @@ function site_navi_logged() {
 								</ul>
 							</li>";
 							}
-							if(intval($_SESSION['username']['secure_staff']) >= "".UC_CLASS_PROJECT_MANAGEMENT."") {
+							if(intval($_SESSION['username']['secure_staff']) >= UC_CLASS_PROJECT_MANAGEMENT) {
 							echo "
 							<li>
 								<a href='javascript: void(0);' class='has-arrow'>
 									<i class='dripicons-user-group'></i>
-									<span data-key='t-blog'>Projektleitung</span>
+									<span data-key='t-blog'>Project Management</span>
 								</a>
 								<ul class='sub-menu' aria-expanded='false'>
 									<li><a href='/staffcp/siteconfig/index.php' data-key='t-blog-grid'>".SITECONFIG_HEADER."</a></li>

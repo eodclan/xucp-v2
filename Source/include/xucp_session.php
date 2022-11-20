@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 2.1
+// * Version: 2.2
 // * 
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -37,7 +37,7 @@ if ($xucp_result->num_rows > 0) {
 			// Site Online Status = 1 | Online
 		}else{
 		// Site Online Status = 0 | Offline
-			site_header_nologged("".SECURE_SYSTEM."");
+			site_header_nologged(SECURE_SYSTEM);
 			site_navi_nologged();
 			site_content_nologged();
             	echo"

@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 2.1
+// * Version: 2.2
 // * 
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -29,7 +29,7 @@ if (isset($_GET["site"])) {
 };  
 $start_from = ($site-1) * $limit;
 
-site_header("".SITECONFIG_HEADER."");
+site_header(SITECONFIG_HEADER);
 site_navi_logged();
 site_content_logged();
 
@@ -58,19 +58,19 @@ if ($result->num_rows > 0) {
   while($siteconfigchange = $result->fetch_assoc()) {
     if ($siteconfig == "" . $siteconfigchange["id"]. "") {
       if(isset($_POST['submit'])){
-		  $site_online 			= filter_input(INPUT_POST, 'site_online', FILTER_SANITIZE_STRING);
-		  $site_name 			= filter_input(INPUT_POST, 'site_name', FILTER_SANITIZE_STRING);
-          $site_dl_section 		= filter_input(INPUT_POST, 'site_dl_section', FILTER_SANITIZE_STRING);
-          $site_rage_section 	= filter_input(INPUT_POST, 'site_rage_section', FILTER_SANITIZE_STRING);
-          $site_altv_section 	= filter_input(INPUT_POST, 'site_altv_section', FILTER_SANITIZE_STRING);
-          $site_fivem_section 	= filter_input(INPUT_POST, 'site_fivem_section', FILTER_SANITIZE_STRING);
-          $site_redm_section 	= filter_input(INPUT_POST, 'site_redm_section', FILTER_SANITIZE_STRING);		  
-		  $site_teamspeak 		= filter_input(INPUT_POST, 'site_teamspeak', FILTER_SANITIZE_STRING);
-		  $site_gservername 	= filter_input(INPUT_POST, 'site_gservername', FILTER_SANITIZE_STRING);
-		  $site_gserverip 		= filter_input(INPUT_POST, 'site_gserverip', FILTER_SANITIZE_STRING);
-		  $site_gserverport 	= filter_input(INPUT_POST, 'site_gserverport', FILTER_SANITIZE_STRING);		  
-		  $site_themes 			= filter_input(INPUT_POST, 'site_themes', FILTER_SANITIZE_STRING);	
-		  $site_upgrade_note 	= filter_input(INPUT_POST, 'site_upgrade_note', FILTER_SANITIZE_STRING);
+		  $site_online 			= filter_input(INPUT_POST, 'site_online', FILTER_SANITIZE_SPECIAL_CHARS);
+		  $site_name 			= filter_input(INPUT_POST, 'site_name', FILTER_SANITIZE_SPECIAL_CHARS);
+          $site_dl_section 		= filter_input(INPUT_POST, 'site_dl_section', FILTER_SANITIZE_SPECIAL_CHARS);
+          $site_rage_section 	= filter_input(INPUT_POST, 'site_rage_section', FILTER_SANITIZE_SPECIAL_CHARS);
+          $site_altv_section 	= filter_input(INPUT_POST, 'site_altv_section', FILTER_SANITIZE_SPECIAL_CHARS);
+          $site_fivem_section 	= filter_input(INPUT_POST, 'site_fivem_section', FILTER_SANITIZE_SPECIAL_CHARS);
+          $site_redm_section 	= filter_input(INPUT_POST, 'site_redm_section', FILTER_SANITIZE_SPECIAL_CHARS);		  
+		  $site_teamspeak 		= filter_input(INPUT_POST, 'site_teamspeak', FILTER_SANITIZE_SPECIAL_CHARS);
+		  $site_gservername 	= filter_input(INPUT_POST, 'site_gservername', FILTER_SANITIZE_SPECIAL_CHARS);
+		  $site_gserverip 		= filter_input(INPUT_POST, 'site_gserverip', FILTER_SANITIZE_SPECIAL_CHARS);
+		  $site_gserverport 	= filter_input(INPUT_POST, 'site_gserverport', FILTER_SANITIZE_SPECIAL_CHARS);		  
+		  $site_themes 			= filter_input(INPUT_POST, 'site_themes', FILTER_SANITIZE_SPECIAL_CHARS);	
+		  $site_upgrade_note 	= filter_input(INPUT_POST, 'site_upgrade_note', FILTER_SANITIZE_SPECIAL_CHARS);
 		  
 		  $sql = "UPDATE xucp_config SET site_dl_section='".$site_dl_section."', site_rage_section='".$site_rage_section."', site_altv_section='".$site_altv_section."', site_fivem_section='".$site_fivem_section."', site_redm_section='".$site_redm_section."', site_online='".$site_online."', site_name='".$site_name."', site_teamspeak='".$site_teamspeak."', site_gservername='".$site_gservername."', site_gserverip='".$site_gserverip."', site_gserverport='".$site_gserverport."', site_themes='".$site_themes."', site_upgrade_note='".$site_upgrade_note."' WHERE id = ".$siteconfigchange['id']."";
 		  $_SESSION['username']['site_settings_site_online'] = $site_online;

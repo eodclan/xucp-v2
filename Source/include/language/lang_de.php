@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 2.1
+// * Version: 2.2
 // * 
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -18,329 +18,329 @@ if ( $_SERVER['REQUEST_METHOD']=='GET' && realpath(__FILE__) == realpath( $_SERV
   	session_destroy();
 	die( header( 'location: /404.php' ) );
 }
-define("SITESTAFF","Staff Tools");
-define("DASHBOARD","Dashboard");
-define("HOME_NOLOGGED","Startseite");
-define("USERPROFILE","User Profil");
-define("USERACCOUNT","Account Tools");
-define("USERPROFILECHANGE","User Profil bearbeiten");
-define("USERSUPPORT","Support");
-define("WELCOMETO","Willkommen bei");
-define("STAFF_NEWSACP","News System");
-define("STAFF_RULESACP","Regelwerk System");
-define("SITE_LOGOUT","Abmelden");
-define("FAQ","FAQs");
-define("NEWS","Neuigkeiten: ");
-define("SECURE_SYSTEM","Secure System");
-define("MYCHARACTERS","Mein Charakter");
-define("FROM_WL","von");
-define("GSERVER_INFO_HEAD","Client & Server");
-define("GSERVER_INFO_01","Hier in der Auflistung siehst du alle Informationen zu unseren Game Server!");
-define("GSERVER_INFO_02","F&uuml;r weitere Fragen wende dich bitte an den Support!");
+const SITESTAFF = "Staff Tools";
+const DASHBOARD = "Dashboard";
+const HOME_NOLOGGED = "Startseite";
+const USERPROFILE = "User Profil";
+const USERACCOUNT = "Account Tools";
+const USERPROFILECHANGE = "User Profil bearbeiten";
+const USERSUPPORT = "Support";
+const WELCOMETO = "Willkommen bei";
+const STAFF_NEWSACP = "News System";
+const STAFF_RULESACP = "Regelwerk System";
+const SITE_LOGOUT = "Abmelden";
+const FAQ = "FAQs";
+const NEWS = "Neuigkeiten: ";
+const SECURE_SYSTEM = "Secure System";
+const MYCHARACTERS = "Mein Charakter";
+const FROM_WL = "von";
+const GSERVER_INFO_HEAD = "Client & Server";
+const GSERVER_INFO_01 = "Hier in der Auflistung siehst du alle Informationen zu unseren Game Server!";
+const GSERVER_INFO_02 = "F&uuml;r weitere Fragen wende dich bitte an den Support!";
 
 // ************************************************************************************//
 // * My Whitelist Status Language Section - Main 
 // ************************************************************************************//
-define("MYWHITELIST_STATUS","Deine Whitelist ist f&uuml;r unseren Server freigegeben. Wir w&uuml;nschen dir Viel Spa&szlig; bei uns!");
-define("MYWHITELIST_STATUS_2","Du hast noch keine Whitelist gestellt bzw. deine Whitelist ist vielleicht noch in Bearbeitung! <a href='/usercp/whitelist/index.php?mywhitelist=addwl'><button class='btn btn-dark'>Zur Whitelist</button></a>");
-define("MYWHITELIST_STATUS_3","Dein Whitelist Fragebogen wurde an unser Team gesendet. Bitte warte nun ab bis du zum Teamspeak Gespr&auml;ch eingeladen wirst.");
-define("MYWHITELIST_STATUS_4","Dein Whitelist Fragebogen konnte leider nicht an unser Team gesendet werden. Wende dich Bitte an unser Support Team.");
-define("MYWHITELIST_STATUS_5","Herzlich Willkommen im Whitelist System, Nimm dir bitte ausreichend Zeit und beantworte die Fragen nach deinen eigenen Ermessen!");
-define("MYWHITELIST_STATUS_6","Bedenke: Du hast 5 Minuten Zeit um den Fragebogen abzuschicken. Nach den 5 Minuten musst du von neu beginnen!");
-define("MYWHITELIST_USERNAME","Dein Benutzername");
-define("MYWHITELIST_CHARNAME","Dein Charaktername");
-define("MYWHITELIST_STORY","Deine Charakter Story");
-define("MYWHITELIST_HEADER","Whitelist System");
+const MYWHITELIST_STATUS = "Deine Whitelist ist f&uuml;r unseren Server freigegeben. Wir w&uuml;nschen dir Viel Spa&szlig; bei uns!";
+const MYWHITELIST_STATUS_2 = "Du hast noch keine Whitelist gestellt bzw. deine Whitelist ist vielleicht noch in Bearbeitung! <a href='/usercp/whitelist/index.php?mywhitelist=addwl'><button class='btn btn-dark'>Zur Whitelist</button></a>";
+const MYWHITELIST_STATUS_3 = "Dein Whitelist Fragebogen wurde an unser Team gesendet. Bitte warte nun ab bis du zum Teamspeak Gespr&auml;ch eingeladen wirst.";
+const MYWHITELIST_STATUS_4 = "Dein Whitelist Fragebogen konnte leider nicht an unser Team gesendet werden. Wende dich Bitte an unser Support Team.";
+const MYWHITELIST_STATUS_5 = "Herzlich Willkommen im Whitelist System, Nimm dir bitte ausreichend Zeit und beantworte die Fragen nach deinen eigenen Ermessen!";
+const MYWHITELIST_STATUS_6 = "Bedenke: Du hast 5 Minuten Zeit um den Fragebogen abzuschicken. Nach den 5 Minuten musst du von neu beginnen!";
+const MYWHITELIST_USERNAME = "Dein Benutzername";
+const MYWHITELIST_CHARNAME = "Dein Charaktername";
+const MYWHITELIST_STORY = "Deine Charakter Story";
+const MYWHITELIST_HEADER = "Whitelist System";
 
 // ************************************************************************************//
 // * Whitelist Language Section - Main 
 // ************************************************************************************//
-define("FRAGE1","Frage 1");
-define("FRAGE2","Frage 2");
-define("FRAGE3","Frage 3");
-define("FRAGE4","Frage 4");
-define("FRAGE5","Frage 5");
-define("FRAGE6","Frage 6");
-define("FRAGE7","Frage 7");
-define("FRAGE8","Frage 8");
-define("FRAGE9","Frage 9");
-define("FRAGE10","Frage 10");
-define("FRAGE11","Frage 11");
-define("FRAGE12","Frage 12");
-define("FRAGEDONE","Deine Eintr&auml;ge waren erfolgreich!");
-define("FRAGENOTE","Es m&uuml;ssen alle Fragen eingetragen werden!");
-define("FRAGEDONEBTN","Bearbeiten");
-define("FRAGE_HEADER","Whitelist Fragen");
-define("FRAGE_HEADER_2","Whitelist Bewerbungen");
-define("FRAGE_VIEW","Bewerbung anschauen");
-define("FRAGE_SEND","Bewerbung abschicken");
+const FRAGE1 = "Frage 1";
+const FRAGE2 = "Frage 2";
+const FRAGE3 = "Frage 3";
+const FRAGE4 = "Frage 4";
+const FRAGE5 = "Frage 5";
+const FRAGE6 = "Frage 6";
+const FRAGE7 = "Frage 7";
+const FRAGE8 = "Frage 8";
+const FRAGE9 = "Frage 9";
+const FRAGE10 = "Frage 10";
+const FRAGE11 = "Frage 11";
+const FRAGE12 = "Frage 12";
+const FRAGEDONE = "Deine Eintr&auml;ge waren erfolgreich!";
+const FRAGENOTE = "Es m&uuml;ssen alle Fragen eingetragen werden!";
+const FRAGEDONEBTN = "Bearbeiten";
+const FRAGE_HEADER = "Whitelist Fragen";
+const FRAGE_HEADER_2 = "Whitelist Bewerbungen";
+const FRAGE_VIEW = "Bewerbung anschauen";
+const FRAGE_SEND = "Bewerbung abschicken";
 
 // ************************************************************************************//
 // * Keyboard Section - Main 
 // ************************************************************************************//
-define("KEY1","Voice Range");
-define("KEY2","LSPD Police Shield (anlegen)");
-define("KEY3","LSPD Police Shield (ablegen)");
-define("KEY4","Auto Farming");
-define("KEY5","Dimension");
-define("KEY6","Tablet");
-define("KEY7","Staatliches Aktensystem");
-define("KEY8","Animationen");
-define("KEY9","Animation Stop");
-define("KEY10","Kleidungsrad");
-define("KEY11","Interagieren");
-define("KEY12","Inventar");
-define("KEY13","Zeigen");
-define("KEY14","Funk");
-define("KEY15","T&uuml;ren");
-define("KEY16","Sonstiges");
-define("KEY17","Siren Stummschalten");
-define("KEY18","Handy Hoch");
-define("KEY19","Handy Runter");
-define("KEYDONE","Deine Eintr&auml;ge waren erfolgreich!");
-define("KEYNOTE","Es m&uuml;ssen alle Keys eingetragen werden!");
-define("KEYERROR","Das war nicht erfolgreich!");
-define("KEYDONEBTN","Bearbeiten");
-define("KEY_HEADER","Tastaturbelegung Manager");
-define("KEY_HEADER_2","Tastaturbelegung");
+const KEY1 = "Voice Range";
+const KEY2 = "LSPD Police Shield (anlegen)";
+const KEY3 = "LSPD Police Shield (ablegen)";
+const KEY4 = "Auto Farming";
+const KEY5 = "Dimension";
+const KEY6 = "Tablet";
+const KEY7 = "Staatliches Aktensystem";
+const KEY8 = "Animationen";
+const KEY9 = "Animation Stop";
+const KEY10 = "Kleidungsrad";
+const KEY11 = "Interagieren";
+const KEY12 = "Inventar";
+const KEY13 = "Zeigen";
+const KEY14 = "Funk";
+const KEY15 = "T&uuml;ren";
+const KEY16 = "Sonstiges";
+const KEY17 = "Siren Stummschalten";
+const KEY18 = "Handy Hoch";
+const KEY19 = "Handy Runter";
+const KEYDONE = "Deine Eintr&auml;ge waren erfolgreich!";
+const KEYNOTE = "Es m&uuml;ssen alle Keys eingetragen werden!";
+const KEYERROR = "Das war nicht erfolgreich!";
+const KEYDONEBTN = "Bearbeiten";
+const KEY_HEADER = "Tastaturbelegung Manager";
+const KEY_HEADER_2 = "Tastaturbelegung";
 
 // ************************************************************************************//
 // * English Language Section - Main Site Settings 
 // ************************************************************************************//
-define("SITECONFIG_HEADER","Seiteneinstellungen");
-define("SITECONFIG_HEADERNOTE","Bitte beachten Sie, dass einige Einstellungen mit 0 oder 1 eingestellt werden müssen!");
-define("SITECONFIG_ONLINE","Site Online Status");
-define("SITECONFIG_ONLINENOTE","Unser UCP ist momentan nicht erreichbar!");
-define("SITECONFIG_NAME","Site Name");
-define("SITECONFIG_DOWNLOAD_SECTION","Download Section");
-define("SITECONFIG_RAGEMP","Rage.MP");
-define("SITECONFIG_ALTV","AltV");
-define("SITECONFIG_FIVEM","FiveM");
-define("SITECONFIG_DONE","<strong>Erfolgreich!</strong> Die Seiteneinstellungen wurden erfolgreich gespeichert!");
-define("SITECONFIG_ERROR","<strong>Error!</strong> Die Seiteneinstellungen wurden nicht erfolgreich gespeichert!");
-define("SITECONFIG_TEAMSPEAK","Teamspeak Adresse");
-define("SITECONFIG_REDM","RedM");
-define("SITECONFIG_GSERVERNAME","Game Server Name");
-define("SITECONFIG_GSERVERIP","Game Server IP");
-define("SITECONFIG_GSERVERPORT","Game Server Port");
-define("SITECONFIG_THEMES","Design");
-define("SITECONFIG_THEMES_INFO","W&auml;hlen Sie das Design, das Sie verwenden m&ouml;chten.");
-define("SITECONFIG_THEMES_BLACK","dark");
-define("SITECONFIG_THEMES_BLUE","light");
-define("SITECONFIG_ONLINE_INFO","W&auml;hlen Sie den Online Status, den Sie verwenden m&ouml;chten.");
-define("SITECONFIG_ONLINE_ONLINE","Online");
-define("SITECONFIG_ONLINE_OFFLINE","Offline");
-define("SITECONFIG_CLIENT_INFO","W&auml;hlen Sie den Status, den Sie verwenden m&ouml;chten.");
-define("SITECONFIG_CLIENT_YES","Ja");
-define("SITECONFIG_CLIENT_NO","Nein");
-define("SITECONFIG_UPGRADE_NOTE","Upgrade Hinweis");
-define("SITECONFIG_UPGRADE_NOTE_INFO","W&auml;hlen Sie die Upgrade Anzeige, den Sie verwenden m&ouml;chten.");
+const SITECONFIG_HEADER = "Seiteneinstellungen";
+const SITECONFIG_HEADERNOTE = "Bitte beachten Sie, dass einige Einstellungen mit 0 oder 1 eingestellt werden müssen!";
+const SITECONFIG_ONLINE = "Site Online Status";
+const SITECONFIG_ONLINENOTE = "Unser UCP ist momentan nicht erreichbar!";
+const SITECONFIG_NAME = "Site Name";
+const SITECONFIG_DOWNLOAD_SECTION = "Download Section";
+const SITECONFIG_RAGEMP = "Rage.MP";
+const SITECONFIG_ALTV = "AltV";
+const SITECONFIG_FIVEM = "FiveM";
+const SITECONFIG_DONE = "<strong>Erfolgreich!</strong> Die Seiteneinstellungen wurden erfolgreich gespeichert!";
+const SITECONFIG_ERROR = "<strong>Error!</strong> Die Seiteneinstellungen wurden nicht erfolgreich gespeichert!";
+const SITECONFIG_TEAMSPEAK = "Teamspeak Adresse";
+const SITECONFIG_REDM = "RedM";
+const SITECONFIG_GSERVERNAME = "Game Server Name";
+const SITECONFIG_GSERVERIP = "Game Server IP";
+const SITECONFIG_GSERVERPORT = "Game Server Port";
+const SITECONFIG_THEMES = "Design";
+const SITECONFIG_THEMES_INFO = "W&auml;hlen Sie das Design, das Sie verwenden m&ouml;chten.";
+const SITECONFIG_THEMES_BLACK = "dark";
+const SITECONFIG_THEMES_BLUE = "light";
+const SITECONFIG_ONLINE_INFO = "W&auml;hlen Sie den Online Status, den Sie verwenden m&ouml;chten.";
+const SITECONFIG_ONLINE_ONLINE = "Online";
+const SITECONFIG_ONLINE_OFFLINE = "Offline";
+const SITECONFIG_CLIENT_INFO = "W&auml;hlen Sie den Status, den Sie verwenden m&ouml;chten.";
+const SITECONFIG_CLIENT_YES = "Ja";
+const SITECONFIG_CLIENT_NO = "Nein";
+const SITECONFIG_UPGRADE_NOTE = "Upgrade Hinweis";
+const SITECONFIG_UPGRADE_NOTE_INFO = "W&auml;hlen Sie die Upgrade Anzeige, den Sie verwenden m&ouml;chten.";
 
 // ************************************************************************************//
 // * German Language Section - Message System 
 // ************************************************************************************//
-define("MSG_1","Sie sollten sich zuerst <a href='/usercp/login/index.php'>einloggen</a>!");
-define("MSG_2","Du bist kein Supporter!");
-define("MSG_3","<b>Du hast den Account erfolgreich bearbeitet!</b>");
-define("MSG_4","<b>Dein Ticket wurde gesendet!</b><br><br><a href='support.php'>Zurück</a>");
-define("MSG_5","<b>Dein Tweet wurde erfolgreich gesendet!</b><br><br><a href='dashboard.php'>Zur&uuml;ck zum Dashboard</a>");
-define("MSG_6","<b>Dein Like in den Tweet wurde erfolgreich gesetzt!</b><br><br><a href='dashboard.php'>Zur&uuml;ck zum Dashboard</a>");
-define("MSG_7","<b>Deine Änderungen konnten nicht gespeichert werden!</b>");
-define("MSG_8","<b>Du hast dein Account erfolgreich bearbeitet!</b>");
-define("MSG_9","<b>Deine Registrierung ist abgeschlossen!</b>");
-define("MSG_10","<b>Bitte f&uuml;llen Sie sowohl den Benutzernamen als auch das Passwortfeld aus!</b>");
-define("MSG_11","<b>Falsches Passwort!</b>");
-define("MSG_12","<b>Kein Benutzer gefunden!</b>");
-define("MSG_13","<b>Die E-Mail ist keine g&uuml;ltige!</b>");
-define("MSG_14","<b>Username nicht g&uuml;ltig</b>");
-define("MSG_15","<b>Das Passwort muss zwischen 5 und 20 Zeichen lang sein!</b>");
-define("MSG_16","<b>Account schon vorhanden</b>");
-define("MSG_17","<b>Dein Logout war erfolgreich!</b>");
-define("MSG_18","<b>Dein News Eintrag war nicht erfolgreich!</b>");
-define("MSG_19","<b>Bitte geben Sie sowohl den deutschen als auch den englischen Titel ein!</b>");
-define("MSG_20","<b>Bitte f&uuml;llen Sie sowohl den deutschen als auch den englischen Kontent aus!</b>");
-define("MSG_21","<b>Dein News Eintrag war erfolgreich!</b>");
-define("MSG_22","<b>Dein Regelwerk Eintrag war erfolgreich!</b>");
-define("MSG_23","<b>Dein Regelwerk Eintrag war nicht erfolgreich!</b>");
-define("MSG_24","<b>Dein FAQ Eintrag war erfolgreich!</b>");
-define("MSG_25","<b>Dein FAQ Eintrag war nicht erfolgreich!</b>");
-define("MSG_26","<b>Dein Rang ist f&uuml;r diese Seite nicht freigeschaltet!</b>");
+const MSG_1 = "Sie sollten sich zuerst <a href='/usercp/login/index.php'>einloggen</a>!";
+const MSG_2 = "Du bist kein Supporter!";
+const MSG_3 = "<b>Du hast den Account erfolgreich bearbeitet!</b>";
+const MSG_4 = "<b>Dein Ticket wurde gesendet!</b><br><br><a href='support.php'>Zurück</a>";
+const MSG_5 = "<b>Dein Tweet wurde erfolgreich gesendet!</b><br><br><a href='dashboard.php'>Zur&uuml;ck zum Dashboard</a>";
+const MSG_6 = "<b>Dein Like in den Tweet wurde erfolgreich gesetzt!</b><br><br><a href='dashboard.php'>Zur&uuml;ck zum Dashboard</a>";
+const MSG_7 = "<b>Deine Änderungen konnten nicht gespeichert werden!</b>";
+const MSG_8 = "<b>Du hast dein Account erfolgreich bearbeitet!</b>";
+const MSG_9 = "<b>Deine Registrierung ist abgeschlossen!</b>";
+const MSG_10 = "<b>Bitte f&uuml;llen Sie sowohl den Benutzernamen als auch das Passwortfeld aus!</b>";
+const MSG_11 = "<b>Falsches Passwort!</b>";
+const MSG_12 = "<b>Kein Benutzer gefunden!</b>";
+const MSG_13 = "<b>Die E-Mail ist keine g&uuml;ltige!</b>";
+const MSG_14 = "<b>Username nicht g&uuml;ltig</b>";
+const MSG_15 = "<b>Das Passwort muss zwischen 5 und 20 Zeichen lang sein!</b>";
+const MSG_16 = "<b>Account schon vorhanden</b>";
+const MSG_17 = "<b>Dein Logout war erfolgreich!</b>";
+const MSG_18 = "<b>Dein News Eintrag war nicht erfolgreich!</b>";
+const MSG_19 = "<b>Bitte geben Sie sowohl den deutschen als auch den englischen Titel ein!</b>";
+const MSG_20 = "<b>Bitte f&uuml;llen Sie sowohl den deutschen als auch den englischen Kontent aus!</b>";
+const MSG_21 = "<b>Dein News Eintrag war erfolgreich!</b>";
+const MSG_22 = "<b>Dein Regelwerk Eintrag war erfolgreich!</b>";
+const MSG_23 = "<b>Dein Regelwerk Eintrag war nicht erfolgreich!</b>";
+const MSG_24 = "<b>Dein FAQ Eintrag war erfolgreich!</b>";
+const MSG_25 = "<b>Dein FAQ Eintrag war nicht erfolgreich!</b>";
+const MSG_26 = "<b>Dein Rang ist f&uuml;r diese Seite nicht freigeschaltet!</b>";
 
 // ************************************************************************************//
 // * German Language Section - My Profile Change
 // ************************************************************************************//
-define("WHITELIST","F&uuml;r die Whitelist");
-define("TWITTER","F&uuml;r das Twitter Modul");
-define("RPSERVER","UCP sowie f&uuml;r den Game Server");
-define("MYPROFILENOTE","Du musst bei jeder Änderung alle Felder ausf&uuml;hlen!");
-define("SIGNATUR","Signatur");
-define("SIGNOTE","Deine Signatur f&uuml;r deine Profil Ansicht!");
-define("AVATAR","Avatar URL");
-define("AVANOTE","Dein Avatar Bild f&uuml;r dein Profil!");
-define("MYPROFILESAVE","Speichern");
-define("LANGUAGE","Webseiten Sprache");
-define("LANGUAGENOTE","Du hast hier die M&ouml;glichkeit die Sprache des UCP zu &auml;ndern.");
-define("CHANGE_MYPROFILE_DASHNOTE","Bitte beachten");
-define("CHANGE_MYPROFILE_PASSWORD","Passwort &auml;ndern");
-define("CHANGE_MYPROFILE_SIGNATUR","Signatur &auml;ndern");
-define("CHANGE_MYPROFILE_USERNAME","Benutzername &auml;ndern");
-define("CHANGE_MYPROFILE_EMAIL","E-Mail Adresse &auml;ndern");
-define("CHANGE_MYPROFILE_AVATAR","Avatar &auml;ndern");
-define("CHANGE_MYPROFILE_AVATARNOTE","Legen Sie Dateien hier ab oder klicken Sie zum Hochladen.");
-define("CHANGE_MYPROFILE_LANGUAGE","Webseiten Sprache &auml;ndern");
-define("CHANGE_MYPROFILE_LANGUAGENOTE","Bitte ausw&auml;hlen");
-define("CHANGE_MYPROFILE_LANGUAGE_SELECT_EN","Englisch");
-define("CHANGE_MYPROFILE_LANGUAGE_SELECT_DE","Deutsch");
+const WHITELIST = "F&uuml;r die Whitelist";
+const TWITTER = "F&uuml;r das Twitter Modul";
+const RPSERVER = "UCP sowie f&uuml;r den Game Server";
+const MYPROFILENOTE = "Du musst bei jeder Änderung alle Felder ausf&uuml;hlen!";
+const SIGNATUR = "Signatur";
+const SIGNOTE = "Deine Signatur f&uuml;r deine Profil Ansicht!";
+const AVATAR = "Avatar URL";
+const AVANOTE = "Dein Avatar Bild f&uuml;r dein Profil!";
+const MYPROFILESAVE = "Speichern";
+const LANGUAGE = "Webseiten Sprache";
+const LANGUAGENOTE = "Du hast hier die M&ouml;glichkeit die Sprache des UCP zu &auml;ndern.";
+const CHANGE_MYPROFILE_DASHNOTE = "Bitte beachten";
+const CHANGE_MYPROFILE_PASSWORD = "Passwort &auml;ndern";
+const CHANGE_MYPROFILE_SIGNATUR = "Signatur &auml;ndern";
+const CHANGE_MYPROFILE_USERNAME = "Benutzername &auml;ndern";
+const CHANGE_MYPROFILE_EMAIL = "E-Mail Adresse &auml;ndern";
+const CHANGE_MYPROFILE_AVATAR = "Avatar &auml;ndern";
+const CHANGE_MYPROFILE_AVATARNOTE = "Legen Sie Dateien hier ab oder klicken Sie zum Hochladen.";
+const CHANGE_MYPROFILE_LANGUAGE = "Webseiten Sprache &auml;ndern";
+const CHANGE_MYPROFILE_LANGUAGENOTE = "Bitte ausw&auml;hlen";
+const CHANGE_MYPROFILE_LANGUAGE_SELECT_EN = "Englisch";
+const CHANGE_MYPROFILE_LANGUAGE_SELECT_DE = "Deutsch";
 
 // ************************************************************************************//
 // * German Language Section - My Profile
 // ************************************************************************************//
-define("PLAYERID","Spieler ID");
-define("PLAYERSOCIALCLUB","Social Club");
-define("PLAYEREMAIL","E-Mail");
-define("PLAYERBANNED","Gebannt");
-define("PLAYERADMIN","Admin Level");
-define("PLAYERWHITELISTED","Whitelistet");
-define("PLAYERFIRSTLOGIN","Erster Login");
-define("PLAYERNOTE1","Auf unseren Projekt wird jede Whitelist in unseren Teamspeak Server abgehalten.");
-define("PLAYERNOTE2","Unser Motto");
-define("PLAYERSIGNATURE","Signatur");
-define("PLAYERABOUTME","&uuml;BER MICH");
-define("AVATAR_CHECK_BACK","Deine Avatar URL ist nicht erlaubt!");
-define("AVATAR_CHECK_OKAY","Deine Avatar URL wurde erlaubt!!");
+const PLAYERID = "Spieler ID";
+const PLAYERSOCIALCLUB = "Social Club";
+const PLAYEREMAIL = "E-Mail";
+const PLAYERBANNED = "Gebannt";
+const PLAYERADMIN = "Admin Level";
+const PLAYERWHITELISTED = "Whitelistet";
+const PLAYERFIRSTLOGIN = "Erster Login";
+const PLAYERNOTE1 = "Auf unseren Projekt wird jede Whitelist in unseren Teamspeak Server abgehalten.";
+const PLAYERNOTE2 = "Unser Motto";
+const PLAYERSIGNATURE = "Signatur";
+const PLAYERABOUTME = "&uuml;BER MICH";
+const AVATAR_CHECK_BACK = "Deine Avatar URL ist nicht erlaubt!";
+const AVATAR_CHECK_OKAY = "Deine Avatar URL wurde erlaubt!!";
 
 // ************************************************************************************//
 // * German Language Section - Dashboard
 // ************************************************************************************//
-define("DASHBOARDUSERS","Registrierte Users");
-define("DASHBOARDSUPPORT","Support Tickets");
+const DASHBOARDUSERS = "Registrierte Users";
+const DASHBOARDSUPPORT = "Support Tickets";
 
 // ************************************************************************************//
 // * German Language Section - News System
 // ************************************************************************************//
-define("NEWS_HEADER","News System");
-define("NEWS_INFO","Du musst alle Felder ausf&uuml;hlen!");
-define("NEWS_TITLE_EN","Titel Englisch");
-define("NEWS_TITLE_EN_TEXT","Der Englische Titel");
-define("NEWS_TITLE_DE","Titel Deutsch");
-define("NEWS_TITLE_DE_TEXT","Der Deutsche Titel");
-define("NEWS_CONTENT_EN","Kontent Englisch");
-define("NEWS_CONTENT_EN_TEXT","Der Englische Content");
-define("NEWS_CONTENT_DE","Kontent Deutsch");
-define("NEWS_CONTENT_DE_TEXT","Der Deutsche Kontent");
-define("NEWS_SAVE","Speichern");
+const NEWS_HEADER = "News System";
+const NEWS_INFO = "Du musst alle Felder ausf&uuml;hlen!";
+const NEWS_TITLE_EN = "Titel Englisch";
+const NEWS_TITLE_EN_TEXT = "Der Englische Titel";
+const NEWS_TITLE_DE = "Titel Deutsch";
+const NEWS_TITLE_DE_TEXT = "Der Deutsche Titel";
+const NEWS_CONTENT_EN = "Kontent Englisch";
+const NEWS_CONTENT_EN_TEXT = "Der Englische Content";
+const NEWS_CONTENT_DE = "Kontent Deutsch";
+const NEWS_CONTENT_DE_TEXT = "Der Deutsche Kontent";
+const NEWS_SAVE = "Speichern";
 
 // ************************************************************************************//
 // * German Language Section - Rules System
 // ************************************************************************************//
-define("RULES_INFO","Du musst alle Felder ausfühlen!");
-define("RULES_TITLE_EN","Titel Englisch");
-define("RULES_TITLE_EN_TEXT","Der Englische Titel");
-define("RULES_TITLE_DE","Titel Deutsch");
-define("RULES_TITLE_DE_TEXT","Der Deutsche Titel");
-define("RULES_CONTENT_EN","Kontent Englisch");
-define("RULES_CONTENT_EN_TEXT","Der Englische Kontent");
-define("RULES_CONTENT_DE","Kontent Deutsch");
-define("RULES_CONTENT_DE_TEXT","Der Deutsche Kontent");
-define("RULES_SAVE","Speichern");
+const RULES_INFO = "Du musst alle Felder ausfühlen!";
+const RULES_TITLE_EN = "Titel Englisch";
+const RULES_TITLE_EN_TEXT = "Der Englische Titel";
+const RULES_TITLE_DE = "Titel Deutsch";
+const RULES_TITLE_DE_TEXT = "Der Deutsche Titel";
+const RULES_CONTENT_EN = "Kontent Englisch";
+const RULES_CONTENT_EN_TEXT = "Der Englische Kontent";
+const RULES_CONTENT_DE = "Kontent Deutsch";
+const RULES_CONTENT_DE_TEXT = "Der Deutsche Kontent";
+const RULES_SAVE = "Speichern";
 
 // ************************************************************************************//
 // * German Language Section - Support
 // ************************************************************************************//
-define("SUPPORTUSERID", "Spieler ID");
-define("SUPPORTINFO", "Dein Support Ticket sollte m&ouml;glichst genau beschrieben werden.");
-define("SUPPORTUSERINFO1", "Gebe dein Username ein");
-define("SUPPORTUSERINFO2", "Welchen Bug hast du gefunden?");
-define("SUPPORTUSERINFO3", "Deine Beschreibung sollte m&ouml;glichst genau beschrieben sein.");
-define("SUPPORTUSERNAME", "Username");
-define("SUPPORTEMAIL", "E-Mail");
-define("SUPPORTSUBJECT", "Betreff");
-define("SUPPORTMSG", "Nachricht");
-define("SUPPORTDATE", "Datum");
-define("SUPPORTSAVE","Speichern");
-define("SUPPORTDELETEINFO","Du hast alle Support Tickets gel&ouml;scht");
-define("SUPPORTDELETE1","<b>Gehe nun zur&uuml;ck zu den <a href='support.php'>Support Tickets</a>!</b>");
-define("SUPPORTDELETE2","Tickets l&ouml;schen!");
-define("SUPPORTADDTICKET1", "Erstelle nun dein Ticket!");
-define("SUPPORTADDTICKET2", "Klick mich");
-define("SUPPORTADDDONE", "Dein Support Ticket wurde gesendet!");
-define("SUPPORT_HEADER_LIST", "Support Tickets");
+const SUPPORTUSERID = "Spieler ID";
+const SUPPORTINFO = "Dein Support Ticket sollte m&ouml;glichst genau beschrieben werden.";
+const SUPPORTUSERINFO1 = "Gebe dein Username ein";
+const SUPPORTUSERINFO2 = "Welchen Bug hast du gefunden?";
+const SUPPORTUSERINFO3 = "Deine Beschreibung sollte m&ouml;glichst genau beschrieben sein.";
+const SUPPORTUSERNAME = "Username";
+const SUPPORTEMAIL = "E-Mail";
+const SUPPORTSUBJECT = "Betreff";
+const SUPPORTMSG = "Nachricht";
+const SUPPORTDATE = "Datum";
+const SUPPORTSAVE = "Speichern";
+const SUPPORTDELETEINFO = "Du hast alle Support Tickets gel&ouml;scht";
+const SUPPORTDELETE1 = "<b>Gehe nun zur&uuml;ck zu den <a href='support.php'>Support Tickets</a>!</b>";
+const SUPPORTDELETE2 = "Tickets l&ouml;schen!";
+const SUPPORTADDTICKET1 = "Erstelle nun dein Ticket!";
+const SUPPORTADDTICKET2 = "Klick mich";
+const SUPPORTADDDONE = "Dein Support Ticket wurde gesendet!";
+const SUPPORT_HEADER_LIST = "Support Tickets";
 
 // ************************************************************************************//
 // * German Language Section - No Logged & Logged Section
 // ************************************************************************************//
-define("REGISTER", "Registrieren");
-define("LOGIN", "Einloggen");
-define("LOGOUT", "Ausloggen");
-define("SOCIALCLUBNAME", "Social Club Name");
-define("USERNAME", "Benutzername");
-define("EMAIL", "E-Mail");
-define("PASSWORD", "Passwort");
-define("SUBMIT", "Senden");
-define("RULES", "Regeln");
-define("NOTE", "<b>Hinweis:</b> Felder mit <span class='pflichtfeld'>*</span> m&uuml;ssen ausgef&uuml;llt werden.");
-define("NOTE2", "<b>Hinweis:</b> Der Username sowie der Social Club Name m&uuml;ssen gleich sein.");
-define("NOTE3", "<b>Hinweis:</b> Sie haben kein Konto?");
-define("NOTE4", "<b>Hinweis:</b> Sie haben ein Konto?");
-define("INFO1", "Benutzername eingeben");
-define("INFO2", "Passwort eingeben");
-define("INDEXTEXT", "Wir Bringen Das Roleplay Auf Ein Neues Level, Mit Unserer Realistischen Handhabung, Sind Uns Keine Grenzen Gesetzt!");
-define("PROFILE_SETTINGS", "Settings");
-define("PROFILE_ABOUT", "About");
-define("PROFILE_PORTFOLIO", "Portfolio");
-define("PROFILE_PORTFOLIO_WEBSITE", "Website");
-define("PROFILE_PORTFOLIO_DISCORDTAG", "Mein Discordtag");
+const REGISTER = "Registrieren";
+const LOGIN = "Einloggen";
+const LOGOUT = "Ausloggen";
+const SOCIALCLUBNAME = "Social Club Name";
+const USERNAME = "Benutzername";
+const EMAIL = "E-Mail";
+const PASSWORD = "Passwort";
+const SUBMIT = "Senden";
+const RULES = "Regeln";
+const NOTE = "<b>Hinweis:</b> Felder mit <span class='pflichtfeld'>*</span> m&uuml;ssen ausgef&uuml;llt werden.";
+const NOTE2 = "<b>Hinweis:</b> Der Username sowie der Social Club Name m&uuml;ssen gleich sein.";
+const NOTE3 = "<b>Hinweis:</b> Sie haben kein Konto?";
+const NOTE4 = "<b>Hinweis:</b> Sie haben ein Konto?";
+const INFO1 = "Benutzername eingeben";
+const INFO2 = "Passwort eingeben";
+const INDEXTEXT = "Wir Bringen Das Roleplay Auf Ein Neues Level, Mit Unserer Realistischen Handhabung, Sind Uns Keine Grenzen Gesetzt!";
+const PROFILE_SETTINGS = "Settings";
+const PROFILE_ABOUT = "About";
+const PROFILE_PORTFOLIO = "Portfolio";
+const PROFILE_PORTFOLIO_WEBSITE = "Website";
+const PROFILE_PORTFOLIO_DISCORDTAG = "Mein Discordtag";
 
 // ************************************************************************************//
 // * German Language Section - Staff Member 
 // ************************************************************************************//
-define("STAFF_USERCAHNEGED","Spieler bearbeiten");
-define("STAFF_USERCONTROL","Spielerliste");
-define("STAFF_USERCONTROLUSERID","Spieler ID");
-define("STAFF_USERCONTROLUSERNAME","Spieler Username");
-define("STAFF_USERCONTROLSOCIALCLUB","Spieler Social Club");
-define("STAFF_USERCONTROLEMAIL","Spieler E-Mail");
-define("STAFF_USERCONTROLACCOUNTWHITELIST","Spieler Whitelisted");
-define("STAFF_USERCONTROLOPTION","Einstellung");
-define("STAFF_USERCONTROLSAVE","Speichern");
-define("STAFF_USERCONTROLDELETE","L&ouml;schen");
-define("STAFF_USERCONTROL_WL_STATUS","W&auml;hlen Sie den Whitelist Status aus.");
+const STAFF_USERCAHNEGED = "Spieler bearbeiten";
+const STAFF_USERCONTROL = "Spielerliste";
+const STAFF_USERCONTROLUSERID = "Spieler ID";
+const STAFF_USERCONTROLUSERNAME = "Spieler Username";
+const STAFF_USERCONTROLSOCIALCLUB = "Spieler Social Club";
+const STAFF_USERCONTROLEMAIL = "Spieler E-Mail";
+const STAFF_USERCONTROLACCOUNTWHITELIST = "Spieler Whitelisted";
+const STAFF_USERCONTROLOPTION = "Einstellung";
+const STAFF_USERCONTROLSAVE = "Speichern";
+const STAFF_USERCONTROLDELETE = "L&ouml;schen";
+const STAFF_USERCONTROL_WL_STATUS = "W&auml;hlen Sie den Whitelist Status aus.";
 
 // ************************************************************************************//
 // * German Language Section - Server Status 
 // ************************************************************************************//
-define("SERVER_STATUS","Server Status");
-define("SERVER_STATUS_DESC","Dedicated Server Status");
-define("SERVER_STATUS_FINAL_MEMORY","Final Memory");
-define("SERVER_STATUS_PEAK","Peak");
-define("SERVER_STATUS_CPU_USAGE","CPU usage");
-define("SERVER_STATUS_ALL_USAGE_MEMORY","All Used Memory");
-define("SERVER_STATUS_SMEMORY_USAGE","Server Memory Usage");
-define("SERVER_STATUS_CPU_USAGE_INFO","CPU-Last nicht absch�tzbar (evtl. zu altes Windows oder fehlende Rechte bei Linux oder Windows)");
-define("SERVER_STATUS_STORAGE_STAGE","Speicherplatz");
+const SERVER_STATUS = "Server Status";
+const SERVER_STATUS_DESC = "Dedicated Server Status";
+const SERVER_STATUS_FINAL_MEMORY = "Final Memory";
+const SERVER_STATUS_PEAK = "Peak";
+const SERVER_STATUS_CPU_USAGE = "CPU usage";
+const SERVER_STATUS_ALL_USAGE_MEMORY = "All Used Memory";
+const SERVER_STATUS_SMEMORY_USAGE = "Server Memory Usage";
+const SERVER_STATUS_CPU_USAGE_INFO = "CPU-Last nicht absch�tzbar (evtl. zu altes Windows oder fehlende Rechte bei Linux oder Windows)";
+const SERVER_STATUS_STORAGE_STAGE = "Speicherplatz";
 
 // ************************************************************************************//
 // * German Language Section - Whitelist System 
 // ************************************************************************************//
-define("WHITELIST_HEADER","Whitelist Fragen &Uuml;bersicht");
+const WHITELIST_HEADER = "Whitelist Fragen &Uuml;bersicht";
 
 // ************************************************************************************//
 // * German Language Section - BB-Code-Editor System
 // ************************************************************************************//
-define("BBCODE_EDITOR","Zitat");
-define("BBCODE_EDITOR_INFO","1 schrieb:");
-define("BBCODE_EDITOR_REMOVE_FORMATTING","Formatierung entfernen");
-define("BBCODE_EDITOR_FONTS","Schriftart");
-define("BBCODE_EDITOR_SIZE","Gr��e");
-define("BBCODE_EDITOR_BOLD","Fett");
-define("BBCODE_EDITOR_ITALIC","Italic");
-define("BBCODE_EDITOR_UNDERLINE","Unterstrichen");
-define("BBCODE_EDITOR_BLETTERS","Blockschrift");
-define("BBCODE_EDITOR_COLOR","Textfarbe");
-define("BBCODE_EDITOR_CENTER","Zentriert");
-define("BBCODE_EDITOR_URL","URL Link");
-define("BBCODE_EDITOR_URL_REMOVE","Links entfernen");
-define("BBCODE_EDITOR_IMAGE","Bild");
-define("BBCODE_EDITOR_NUMBERLIST","nummerierte Liste");
-define("BBCODE_EDITOR_NORMAL_NUMBERLIST","normale Liste");
+const BBCODE_EDITOR = "Zitat";
+const BBCODE_EDITOR_INFO = "1 schrieb:";
+const BBCODE_EDITOR_REMOVE_FORMATTING = "Formatierung entfernen";
+const BBCODE_EDITOR_FONTS = "Schriftart";
+const BBCODE_EDITOR_SIZE = "Gr��e";
+const BBCODE_EDITOR_BOLD = "Fett";
+const BBCODE_EDITOR_ITALIC = "Italic";
+const BBCODE_EDITOR_UNDERLINE = "Unterstrichen";
+const BBCODE_EDITOR_BLETTERS = "Blockschrift";
+const BBCODE_EDITOR_COLOR = "Textfarbe";
+const BBCODE_EDITOR_CENTER = "Zentriert";
+const BBCODE_EDITOR_URL = "URL Link";
+const BBCODE_EDITOR_URL_REMOVE = "Links entfernen";
+const BBCODE_EDITOR_IMAGE = "Bild";
+const BBCODE_EDITOR_NUMBERLIST = "nummerierte Liste";
+const BBCODE_EDITOR_NORMAL_NUMBERLIST = "normale Liste";
 ?>

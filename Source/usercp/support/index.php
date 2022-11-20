@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 2.1
+// * Version: 2.2
 // * 
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -23,7 +23,7 @@ if (isset($_GET["site"])) {
 };  
 $start_from = ($site-1) * $limit;
 
-site_header("".USERSUPPORT."");
+site_header(USERSUPPORT);
 site_navi_logged();
 site_content_logged();
 
@@ -45,9 +45,9 @@ echo"
                         </div>";  
 
 if(isset($_POST['posted_sup'])){
-	$username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
-	$msg 	= filter_input(INPUT_POST, 'msg', FILTER_SANITIZE_STRING);
-	$bug 	= filter_input(INPUT_POST, 'bug', FILTER_SANITIZE_STRING);
+	$username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_SPECIAL_CHARS);
+	$msg 	= filter_input(INPUT_POST, 'msg', FILTER_SANITIZE_SPECIAL_CHARS);
+	$bug 	= filter_input(INPUT_POST, 'bug', FILTER_SANITIZE_SPECIAL_CHARS);
 	$posted 	= date('Y-m-d H:i:s');
 
 	// The 2nd check to make sure that nothing bad can happen.

@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 2.1
+// * Version: 2.2
 // * 
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -16,7 +16,7 @@ site_secure();
 secure_url();
 site_secure_staff_check_rank();
 
-site_header("".FRAGE_HEADER."");
+site_header(FRAGE_HEADER);
 site_navi_logged();
 site_content_logged();
 
@@ -59,18 +59,18 @@ if(isset($_POST['wlask_sup'])){
     }
     else
     {
-        $frage1 	= filter_input(INPUT_POST, 'frage1', FILTER_SANITIZE_STRING);
-        $frage2 	= filter_input(INPUT_POST, 'frage2', FILTER_SANITIZE_STRING);
-        $frage3 	= filter_input(INPUT_POST, 'frage3', FILTER_SANITIZE_STRING);
-        $frage4 	= filter_input(INPUT_POST, 'frage4', FILTER_SANITIZE_STRING);
-        $frage5 	= filter_input(INPUT_POST, 'frage5', FILTER_SANITIZE_STRING);
-        $frage6 	= filter_input(INPUT_POST, 'frage6', FILTER_SANITIZE_STRING);
-        $frage7 	= filter_input(INPUT_POST, 'frage7', FILTER_SANITIZE_STRING);
-        $frage8 	= filter_input(INPUT_POST, 'frage8', FILTER_SANITIZE_STRING);
-        $frage9 	= filter_input(INPUT_POST, 'frage9', FILTER_SANITIZE_STRING);
-        $frage10 	= filter_input(INPUT_POST, 'frage10', FILTER_SANITIZE_STRING);
-        $frage11 	= filter_input(INPUT_POST, 'frage11', FILTER_SANITIZE_STRING);
-        $frage12 	= filter_input(INPUT_POST, 'frage12', FILTER_SANITIZE_STRING);
+        $frage1 	= filter_input(INPUT_POST, 'frage1', FILTER_SANITIZE_SPECIAL_CHARS);
+        $frage2 	= filter_input(INPUT_POST, 'frage2', FILTER_SANITIZE_SPECIAL_CHARS);
+        $frage3 	= filter_input(INPUT_POST, 'frage3', FILTER_SANITIZE_SPECIAL_CHARS);
+        $frage4 	= filter_input(INPUT_POST, 'frage4', FILTER_SANITIZE_SPECIAL_CHARS);
+        $frage5 	= filter_input(INPUT_POST, 'frage5', FILTER_SANITIZE_SPECIAL_CHARS);
+        $frage6 	= filter_input(INPUT_POST, 'frage6', FILTER_SANITIZE_SPECIAL_CHARS);
+        $frage7 	= filter_input(INPUT_POST, 'frage7', FILTER_SANITIZE_SPECIAL_CHARS);
+        $frage8 	= filter_input(INPUT_POST, 'frage8', FILTER_SANITIZE_SPECIAL_CHARS);
+        $frage9 	= filter_input(INPUT_POST, 'frage9', FILTER_SANITIZE_SPECIAL_CHARS);
+        $frage10 	= filter_input(INPUT_POST, 'frage10', FILTER_SANITIZE_SPECIAL_CHARS);
+        $frage11 	= filter_input(INPUT_POST, 'frage11', FILTER_SANITIZE_SPECIAL_CHARS);
+        $frage12 	= filter_input(INPUT_POST, 'frage12', FILTER_SANITIZE_SPECIAL_CHARS);
 		
 		// The 2nd check to make sure that nothing bad can happen.
         if (preg_match('/[A-Za-z0-9]+/', $_POST['frage1']) == 0) {

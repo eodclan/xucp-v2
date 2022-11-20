@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 2.1
+// * Version: 2.2
 // * 
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -16,7 +16,7 @@ site_secure();
 secure_url();
 site_secure_staff_check();
 
-site_header("Whitelist Fragen Übersicht");
+site_header(WHITELIST_HEADER);
 site_navi_logged();
 site_content_logged();
 

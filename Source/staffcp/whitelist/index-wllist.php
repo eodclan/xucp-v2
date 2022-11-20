@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 2.1
+// * Version: 2.2
 // * 
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -23,7 +23,7 @@ if (isset($_GET["site"])) {
 };  
 $start_from = ($site-1) * $limit;
 
-site_header("".FRAGE_HEADER_2."");
+site_header(FRAGE_HEADER_2);
 site_navi_logged();
 site_content_logged();
 

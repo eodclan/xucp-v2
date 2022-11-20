@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 2.1
+// * Version: 2.2
 // * 
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -18,7 +18,11 @@ if ( $_SERVER['REQUEST_METHOD']=='GET' && realpath(__FILE__) == realpath( $_SERV
   	session_destroy();
 	die( header( 'location: /404.php' ) );
 }
-function site_footer() {
+/**
+ * @return void
+ */
+function site_footer(): void
+{
   secure_url();
   echo "
                     </div>

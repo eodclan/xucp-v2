@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 2.1
+// * Version: 2.2
 // * 
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -15,7 +15,7 @@ include(dirname(__FILE__) . "/../../include/features.php");
 site_secure();
 secure_url();
 
-site_header("".GSERVER_INFO_HEAD."");
+site_header(GSERVER_INFO_HEAD);
 site_navi_logged();
 site_content_logged();
 	echo "

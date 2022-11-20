@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 2.1
+// * Version: 2.2
 // * 
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -15,7 +15,7 @@ include(dirname(__FILE__) . "/../../include/features.php");
 site_secure();
 secure_url();
 
-site_header("".USERPROFILECHANGE."");
+site_header(USERPROFILECHANGE);
 site_navi_logged();
 site_content_logged();
 
@@ -59,12 +59,12 @@ if ($profilechange == "changemydata") {
 		}
 		else
 		{	
-			$usersig = filter_input(INPUT_POST, 'usersig', FILTER_SANITIZE_STRING);
-			$userava = filter_input(INPUT_POST, 'userava', FILTER_SANITIZE_STRING);
-			$userhp = filter_input(INPUT_POST, 'userhp', FILTER_SANITIZE_STRING);
-			$userdiscordtag = filter_input(INPUT_POST, 'userdiscordtag', FILTER_SANITIZE_STRING);
+			$usersig = filter_input(INPUT_POST, 'usersig', FILTER_SANITIZE_SPECIAL_CHARS);
+			$userava = filter_input(INPUT_POST, 'userava', FILTER_SANITIZE_SPECIAL_CHARS);
+			$userhp = filter_input(INPUT_POST, 'userhp', FILTER_SANITIZE_SPECIAL_CHARS);
+			$userdiscordtag = filter_input(INPUT_POST, 'userdiscordtag', FILTER_SANITIZE_SPECIAL_CHARS);
 			$email 	= filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-			$language 	= filter_input(INPUT_POST, 'language', FILTER_SANITIZE_STRING);			
+			$language 	= filter_input(INPUT_POST, 'language', FILTER_SANITIZE_SPECIAL_CHARS);			
 			$password = filter_input(INPUT_POST, 'password', FILTER_DEFAULT);
 			$hashPassword = password_hash($password,PASSWORD_BCRYPT);			
 

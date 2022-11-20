@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 2.1
+// * Version: 2.2
 // * 
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -22,21 +22,21 @@ else $mywhitelist = "view";
 
 if ($mywhitelist == "addwl") {
 	if(isset($_POST['myaddwl'])){
-		$ucpname    = filter_input(INPUT_POST, 'ucpname', FILTER_SANITIZE_STRING);
-		$charname     = filter_input(INPUT_POST, 'charname', FILTER_SANITIZE_STRING);
-		$charstory     = filter_input(INPUT_POST, 'charstory', FILTER_SANITIZE_STRING);
-		$frage1     = filter_input(INPUT_POST, 'frage1', FILTER_SANITIZE_STRING);
-		$frage2     = filter_input(INPUT_POST, 'frage2', FILTER_SANITIZE_STRING);
-		$frage3     = filter_input(INPUT_POST, 'frage3', FILTER_SANITIZE_STRING);
-		$frage4     = filter_input(INPUT_POST, 'frage4', FILTER_SANITIZE_STRING);
-		$frage5     = filter_input(INPUT_POST, 'frage5', FILTER_SANITIZE_STRING);
-		$frage6     = filter_input(INPUT_POST, 'frage6', FILTER_SANITIZE_STRING);
-		$frage7     = filter_input(INPUT_POST, 'frage7', FILTER_SANITIZE_STRING);
-		$frage8     = filter_input(INPUT_POST, 'frage8', FILTER_SANITIZE_STRING);
-		$frage9     = filter_input(INPUT_POST, 'frage9', FILTER_SANITIZE_STRING);
-		$frage10    = filter_input(INPUT_POST, 'frage10', FILTER_SANITIZE_STRING);
-		$frage11    = filter_input(INPUT_POST, 'frage11', FILTER_SANITIZE_STRING);
-		$frage12    = filter_input(INPUT_POST, 'frage12', FILTER_SANITIZE_STRING);
+		$ucpname    = filter_input(INPUT_POST, 'ucpname', FILTER_SANITIZE_SPECIAL_CHARS);
+		$charname     = filter_input(INPUT_POST, 'charname', FILTER_SANITIZE_SPECIAL_CHARS);
+		$charstory     = filter_input(INPUT_POST, 'charstory', FILTER_SANITIZE_SPECIAL_CHARS);
+		$frage1     = filter_input(INPUT_POST, 'frage1', FILTER_SANITIZE_SPECIAL_CHARS);
+		$frage2     = filter_input(INPUT_POST, 'frage2', FILTER_SANITIZE_SPECIAL_CHARS);
+		$frage3     = filter_input(INPUT_POST, 'frage3', FILTER_SANITIZE_SPECIAL_CHARS);
+		$frage4     = filter_input(INPUT_POST, 'frage4', FILTER_SANITIZE_SPECIAL_CHARS);
+		$frage5     = filter_input(INPUT_POST, 'frage5', FILTER_SANITIZE_SPECIAL_CHARS);
+		$frage6     = filter_input(INPUT_POST, 'frage6', FILTER_SANITIZE_SPECIAL_CHARS);
+		$frage7     = filter_input(INPUT_POST, 'frage7', FILTER_SANITIZE_SPECIAL_CHARS);
+		$frage8     = filter_input(INPUT_POST, 'frage8', FILTER_SANITIZE_SPECIAL_CHARS);
+		$frage9     = filter_input(INPUT_POST, 'frage9', FILTER_SANITIZE_SPECIAL_CHARS);
+		$frage10    = filter_input(INPUT_POST, 'frage10', FILTER_SANITIZE_SPECIAL_CHARS);
+		$frage11    = filter_input(INPUT_POST, 'frage11', FILTER_SANITIZE_SPECIAL_CHARS);
+		$frage12    = filter_input(INPUT_POST, 'frage12', FILTER_SANITIZE_SPECIAL_CHARS);
 
 		$sql = "INSERT INTO xucp_whitelist SET ucpname='".$ucpname."', charname='".$charname."', charstory='".$charstory."', frage1='".$frage1."', frage2='".$frage2."', frage3='".$frage3."', frage4='".$frage4."', frage5='".$frage5."', frage6='".$frage6."', frage7='".$frage7."', frage8='".$frage8."', frage9='".$frage9."', frage10='".$frage10."', frage11='".$frage11."', frage12='".$frage12."'";
    
@@ -48,7 +48,7 @@ if ($mywhitelist == "addwl") {
 	}		
 }
 
-site_header("".MYWHITELIST_HEADER."");
+site_header(MYWHITELIST_HEADER);
 site_navi_logged();
 site_content_logged();
 

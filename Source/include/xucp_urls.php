@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 2.1
+// * Version: 2.2
 // * 
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -12,7 +12,8 @@
 // ************************************************************************************//
 // * Site secure url system
 // ************************************************************************************//
-function secure_url() {
+function secure_url(): void
+{
   $ct_spammer_def = array();                    // Reset Definition Array "Spammer"
   $ct_mailscn_def = array();                    // Reset Definition Array "Mailscan"
   $ct_userspm_def = array();                    // Reset Definition Array "Userblocks"

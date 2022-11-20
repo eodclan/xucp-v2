@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 2.1
+// * Version: 2.2
 // * 
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -18,7 +18,7 @@ if (isset($_GET["myregister"])) $myregister = trim(htmlentities($_GET["myregiste
 elseif (isset($_POST["myregister"])) $myregister = trim(htmlentities($_POST["myregister"]));
 else $myregister = "view";
 
-site_header_nologged("".REGISTER."");
+site_header_nologged(REGISTER);
 site_navi_nologged();
 site_content_nologged();
 
@@ -41,7 +41,7 @@ echo "
 
 if ($myregister == "register") {
 	if(isset($_POST['now_register'])){
-		$username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
+		$username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_SPECIAL_CHARS);
 		$email 	= filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
 		$password = filter_input(INPUT_POST, 'password', FILTER_DEFAULT);
 		$hashPassword = password_hash($password,PASSWORD_BCRYPT);
@@ -111,9 +111,9 @@ if ($myregister == "register") {
 								</div>
 							</div>
 						</div>";
-				unset($_SESSION['secure_granted']['granted']);					
+				unset($_SESSION['secure_granted']['granted']);
 				unset($_SESSION['xucp_secure']['csrf_token']);
-				unset($_SESSION['xucp_secure']['csrf_token_time']);					
+				unset($_SESSION['xucp_secure']['csrf_token_time']);
 			}
 		}
 		// CSRF Token Time Validation

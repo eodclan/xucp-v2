@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 2.1
+// * Version: 2.2
 // * 
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -28,7 +28,7 @@ if (isset($_GET["site"])) {
 };  
 $start_from = ($site-1) * $limit;
 
-site_header("".STAFF_USERCAHNEGED."");
+site_header(STAFF_USERCAHNEGED);
 site_navi_logged();
 site_content_logged();
 
@@ -57,9 +57,9 @@ if ($result->num_rows > 0) {
 	while($userchange = $result->fetch_assoc()) {
 		if ($ucpchanger == "" . $userchange["id"]. "") {
 			if(isset($_POST['submit'])){
-				$username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
+				$username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_SPECIAL_CHARS);
 				$email 	= filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-				$whitelisted 	= filter_input(INPUT_POST, 'whitelisted', FILTER_SANITIZE_STRING);
+				$whitelisted 	= filter_input(INPUT_POST, 'whitelisted', FILTER_SANITIZE_SPECIAL_CHARS);
 
 				// The 2nd check to make sure that nothing bad can happen.    
 				if (preg_match('/[A-Za-z0-9]+/', $_POST['username']) == 0) {

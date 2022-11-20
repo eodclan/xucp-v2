@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 2.1
+// * Version: 2.2
 // * 
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -16,7 +16,7 @@ site_secure();
 secure_url();
 site_secure_staff_check_rank();
 
-site_header("".STAFF_RULESACP."");
+site_header(STAFF_RULESACP);
 site_navi_logged();
 site_content_logged();
 
@@ -59,10 +59,10 @@ if(isset($_POST['rules_sup'])){
     }
     else
     {
-        $title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING);
-        $title_de 	= filter_input(INPUT_POST, 'title_de', FILTER_SANITIZE_STRING);
-        $content 	= filter_input(INPUT_POST, 'content', FILTER_SANITIZE_STRING);
-        $content_de 	= filter_input(INPUT_POST, 'content_de', FILTER_SANITIZE_STRING);
+        $title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_SPECIAL_CHARS);
+        $title_de 	= filter_input(INPUT_POST, 'title_de', FILTER_SANITIZE_SPECIAL_CHARS);
+        $content 	= filter_input(INPUT_POST, 'content', FILTER_SANITIZE_SPECIAL_CHARS);
+        $content_de 	= filter_input(INPUT_POST, 'content_de', FILTER_SANITIZE_SPECIAL_CHARS);
 
 		// The 2nd check to make sure that nothing bad can happen.		
         if (preg_match('/[A-Za-z0-9]+/', $_POST['title']) == 0) {

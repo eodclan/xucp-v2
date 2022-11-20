@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 2.1
+// * Version: 2.2
 // * 
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -40,11 +40,11 @@ session_regenerate_id(true);
 // ************************************************************************************//
 // * MySQL Database Connection
 // ************************************************************************************//
-define('MYSQL_USER', 'your_database_username');
-define('MYSQL_PASSWORD', 'your_database_password');
-define('MYSQL_HOST', 'localhost');
-define('MYSQL_DATABASE', 'your_database_name');
-define('MYSQL_PORT', '3306');
+const MYSQL_USER = 'your_database_username';
+const MYSQL_PASSWORD = 'your_database_password';
+const MYSQL_HOST = 'localhost';
+const MYSQL_DATABASE = 'your_database_name';
+const MYSQL_PORT = '3306';
 
 // ************************************************************************************//
 // * MySQL Account Data Connect

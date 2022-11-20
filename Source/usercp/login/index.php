@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 2.1
+// * Version: 2.2
 // * 
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -53,7 +53,7 @@ if('POST' == $_SERVER['REQUEST_METHOD'] && isset($_POST['login'])){
 	else
 	{	
 		session_regenerate_id();
-		$username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
+		$username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_SPECIAL_CHARS);
 		$password = filter_input(INPUT_POST, 'password', FILTER_DEFAULT);
 
 		// The 2nd check to make sure that nothing bad can happen.

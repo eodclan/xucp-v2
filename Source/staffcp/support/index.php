@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 2.1
+// * Version: 2.2
 // * 
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -29,7 +29,7 @@ if (isset($_GET["support"])) $support = trim(htmlentities($_GET["support"]));
 elseif (isset($_POST["support"])) $support = trim(htmlentities($_POST["support"]));
 else $support = "view";
 
-site_header("".SUPPORT_HEADER_LIST."");
+site_header(SUPPORT_HEADER_LIST);
 site_navi_logged();
 site_content_logged();
 

@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 2.1
+// * Version: 2.2
 // * 
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -16,7 +16,7 @@ site_secure();
 secure_url();
 site_secure_staff_check_rank();
 
-site_header("".KEY_HEADER."");
+site_header(KEY_HEADER);
 site_navi_logged();
 site_content_logged();
 
@@ -59,25 +59,25 @@ if(isset($_POST['add_key'])){
     }
     else
     {
-        $key1 	= filter_input(INPUT_POST, 'key1', FILTER_SANITIZE_STRING);
-        $key2 	= filter_input(INPUT_POST, 'key2', FILTER_SANITIZE_STRING);
-        $key3 	= filter_input(INPUT_POST, 'key3', FILTER_SANITIZE_STRING);
-        $key4 	= filter_input(INPUT_POST, 'key4', FILTER_SANITIZE_STRING);
-        $key5 	= filter_input(INPUT_POST, 'key5', FILTER_SANITIZE_STRING);
-        $key6 	= filter_input(INPUT_POST, 'key6', FILTER_SANITIZE_STRING);
-        $key7 	= filter_input(INPUT_POST, 'key7', FILTER_SANITIZE_STRING);
-        $key8 	= filter_input(INPUT_POST, 'key8', FILTER_SANITIZE_STRING);
-        $key9 	= filter_input(INPUT_POST, 'key9', FILTER_SANITIZE_STRING);
-        $key10 	= filter_input(INPUT_POST, 'key10', FILTER_SANITIZE_STRING);
-        $key11 	= filter_input(INPUT_POST, 'key11', FILTER_SANITIZE_STRING);
-        $key12 	= filter_input(INPUT_POST, 'key12', FILTER_SANITIZE_STRING);
-        $key13 	= filter_input(INPUT_POST, 'key13', FILTER_SANITIZE_STRING);
-        $key14 	= filter_input(INPUT_POST, 'key14', FILTER_SANITIZE_STRING);
-        $key15 	= filter_input(INPUT_POST, 'key15', FILTER_SANITIZE_STRING);
-        $key16 	= filter_input(INPUT_POST, 'key16', FILTER_SANITIZE_STRING);
-        $key17 	= filter_input(INPUT_POST, 'key17', FILTER_SANITIZE_STRING);
-        $key18 	= filter_input(INPUT_POST, 'key18', FILTER_SANITIZE_STRING);
-        $key19 	= filter_input(INPUT_POST, 'key19', FILTER_SANITIZE_STRING);		
+        $key1 	= filter_input(INPUT_POST, 'key1', FILTER_SANITIZE_SPECIAL_CHARS);
+        $key2 	= filter_input(INPUT_POST, 'key2', FILTER_SANITIZE_SPECIAL_CHARS);
+        $key3 	= filter_input(INPUT_POST, 'key3', FILTER_SANITIZE_SPECIAL_CHARS);
+        $key4 	= filter_input(INPUT_POST, 'key4', FILTER_SANITIZE_SPECIAL_CHARS);
+        $key5 	= filter_input(INPUT_POST, 'key5', FILTER_SANITIZE_SPECIAL_CHARS);
+        $key6 	= filter_input(INPUT_POST, 'key6', FILTER_SANITIZE_SPECIAL_CHARS);
+        $key7 	= filter_input(INPUT_POST, 'key7', FILTER_SANITIZE_SPECIAL_CHARS);
+        $key8 	= filter_input(INPUT_POST, 'key8', FILTER_SANITIZE_SPECIAL_CHARS);
+        $key9 	= filter_input(INPUT_POST, 'key9', FILTER_SANITIZE_SPECIAL_CHARS);
+        $key10 	= filter_input(INPUT_POST, 'key10', FILTER_SANITIZE_SPECIAL_CHARS);
+        $key11 	= filter_input(INPUT_POST, 'key11', FILTER_SANITIZE_SPECIAL_CHARS);
+        $key12 	= filter_input(INPUT_POST, 'key12', FILTER_SANITIZE_SPECIAL_CHARS);
+        $key13 	= filter_input(INPUT_POST, 'key13', FILTER_SANITIZE_SPECIAL_CHARS);
+        $key14 	= filter_input(INPUT_POST, 'key14', FILTER_SANITIZE_SPECIAL_CHARS);
+        $key15 	= filter_input(INPUT_POST, 'key15', FILTER_SANITIZE_SPECIAL_CHARS);
+        $key16 	= filter_input(INPUT_POST, 'key16', FILTER_SANITIZE_SPECIAL_CHARS);
+        $key17 	= filter_input(INPUT_POST, 'key17', FILTER_SANITIZE_SPECIAL_CHARS);
+        $key18 	= filter_input(INPUT_POST, 'key18', FILTER_SANITIZE_SPECIAL_CHARS);
+        $key19 	= filter_input(INPUT_POST, 'key19', FILTER_SANITIZE_SPECIAL_CHARS);		
         
         $sql = "UPDATE xucp_keys SET key1='".$key1."', key2='".$key2."', key3='".$key3."', key4='".$key4."', key5='".$key5."', key6='".$key6."', key7='".$key7."', key8='".$key8."', key9='".$key9."', key10='".$key10."', key11='".$key11."', key12='".$key12."', key13='".$key13."', key14='".$key14."', key15='".$key15."', key16='".$key16."', key17='".$key17."', key18='".$key18."', key19='".$key19."' WHERE id = '1'";
         $result = mysqli_query($conn, $sql);

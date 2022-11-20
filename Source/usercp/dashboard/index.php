@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 2.1
+// * Version: 2.2
 // * 
 // * Copyright (c) 2022 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -15,7 +15,7 @@ include(dirname(__FILE__) . "/../../include/features.php");
 site_secure();
 secure_url();
 
-site_header("".DASHBOARD."");
+site_header(DASHBOARD);
 site_navi_logged();
 site_content_logged();
 
@@ -65,7 +65,7 @@ echo "
                         </div>";					
 }					
 
-if(intval($_SESSION['username']['secure_staff']) >= "".UC_CLASS_SUPPORTER."") {
+if(intval($_SESSION['username']['secure_staff']) >= UC_CLASS_SUPPORTER) {
 echo "
                         <div class='row'>";
 
