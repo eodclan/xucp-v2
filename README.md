@@ -10,7 +10,7 @@ https://derstr1k3r.de
 https://discord.gg/xg5mnYUWch
 
 
-xUCP Pro V2.0 Demopage:
+xUCP Pro V2.2 Demopage:
 
 https://xucp.derstr1k3r.de
 
@@ -21,7 +21,7 @@ Requirements for xUCP V2 Free:
 
   1. MySQL servers
   2. Web server (XAMPP is not supported!)
-  3. Php 8.x or newer
+  3. Php 8.1 or newer
 
 Features of the xUCP V2 Free:
 
