@@ -10,7 +10,7 @@ https://derstr1k3r.de
 https://discord.gg/xg5mnYUWch
 
 
-xUCP Pro V2.2 Demopage:
+xUCP Pro V2.3 Demopage:
 
 https://xucp.derstr1k3r.de
 
