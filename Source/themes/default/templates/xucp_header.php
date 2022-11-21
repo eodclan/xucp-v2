@@ -32,7 +32,7 @@ function site_header(string $SITESUBTITLE = ""): void
 <html lang='en'>
     <head>
 		<!-- ####################################################### -->
-		<!-- #   Powered by xUCP Free Version 2.1                  # -->
+		<!-- #   Powered by xUCP Free Version 2.2                  # -->
 		<!-- #   Copyright (c) 2022 DerStr1k3r.                    # -->
 		<!-- #   All rights reserved.                              # -->
 		<!-- ####################################################### -->	
@@ -118,7 +118,7 @@ function site_header_nologged(string $SITESUBTITLE = ""): void
 <html lang='en'>
     <head>
 		<!-- ####################################################### -->
-		<!-- #   Powered by xUCP Free Version 2.1                  # -->
+		<!-- #   Powered by xUCP Free Version 2.2                  # -->
 		<!-- #   Copyright (c) 2022 DerStr1k3r.                    # -->
 		<!-- #   All rights reserved.                              # -->
 		<!-- ####################################################### -->	

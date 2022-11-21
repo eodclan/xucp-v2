@@ -130,7 +130,8 @@ function site_navi_logged(): void
             </div>";
 }
 
-function site_navi_nologged() {
+function site_navi_nologged(): void
+{
 		echo "
             <div class='vertical-menu'>
                 <div data-simplebar class='h-100'>

@@ -13,7 +13,7 @@
 include(dirname(__FILE__) . "/../../include/features.php");
 secure_url();
 
-site_header_nologged("".LOGIN."");
+site_header_nologged(LOGIN);
 site_navi_nologged();
 site_content_nologged();
 

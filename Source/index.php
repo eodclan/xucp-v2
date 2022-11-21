@@ -12,7 +12,7 @@
 // ************************************************************************************//
 include(dirname(__FILE__) . "/include/features.php");
 secure_url();
-site_header_nologged("".HOME_NOLOGGED."");
+site_header_nologged(HOME_NOLOGGED);
 site_navi_nologged();
 site_content_nologged();
 echo "
