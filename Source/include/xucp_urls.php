@@ -77,9 +77,9 @@ function secure_url(): void
                   'server_', 'server[', '/modules', 'modules/', 'phpadmin',
                   'root_path', '_globals', 'globals_', 'globals[', 'iso-8859-1',
                   '?hl=', '%3fhl=', '.exe', '.sh', '%00', rawurldecode('%00'), '_env');
-$checkworm = str_replace($wormprotector, 'X*X', $cracktrack);  
+  $checkworm = str_replace($wormprotector, 'X*X', $cracktrack);
 
-$ct_spammer_def = array(
+  $ct_spammer_def = array(
     '*pills*',
     '*viagra*',
     '*phentermine*',
@@ -102,7 +102,7 @@ $ct_spammer_def = array(
     '*my_photos*');
 
 
-$ct_mailscn_def = array(
+  $ct_mailscn_def = array(
     '*@bumpymail.com',
     '*@centermail.com',
     '*@centermail.net',
@@ -157,7 +157,7 @@ $ct_mailscn_def = array(
     '*@pisem.net');
 
 
-$ct_userspm_def = array(
+  $ct_userspm_def = array(
     'funtklakow',
     'jtfoe1974',
     'unmmyns',
@@ -182,7 +182,7 @@ $ct_userspm_def = array(
 		$manipulated = str_replace($delete , "'" ,$manipulated); 
 		$cremotead = $_SERVER['REMOTE_ADDR'];
 		$cuseragent = $_SERVER['HTTP_USER_AGENT'];
-        die( "<font color=red>Attack detected! <br /><br /><b>has detected a potential attack on this site with a worm or exploit script so the Security System stopped the script.:</b><br />$cremotead - $cuseragent" );
+        die( "Attack detected! <br /><br /><b>has detected a potential attack on this site with a worm or exploit script so the Security System stopped the script.:</b><br />$cremotead - $cuseragent" );
 	}
 }
 ?>

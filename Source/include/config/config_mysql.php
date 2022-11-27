@@ -50,11 +50,11 @@ const MYSQL_PORT = '3306';
 // * MySQL Account Data Connect
 // ************************************************************************************//
 $conn = mysqli_connect(
-			"" . MYSQL_HOST . "",
-			"" . MYSQL_USER . "",
-			"" . MYSQL_PASSWORD . "",
-			"" . MYSQL_DATABASE . "",
-			"" . MYSQL_PORT . "");
+			MYSQL_HOST,
+            MYSQL_USER,
+            MYSQL_PASSWORD,
+            MYSQL_DATABASE,
+            MYSQL_PORT);
 
 // ************************************************************************************//
 // * MySQL Connection error failed Msg
